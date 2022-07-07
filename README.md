@@ -25,3 +25,24 @@ aws cloudformation deploy --template-file cloudfront.yml --stack-name production
 ### Solution Reference
 
 [udacity/nd9991-c3-hello-world-exercise-solution](https://github.com/udacity/nd9991-c3-hello-world-exercise-solution)
+
+### Make S3 Bucket Public
+
+[How to create public AWS S3 bucket](https://www.simplified.guide/aws/s3/create-public-bucket)
+
+Bucket policy:
+
+```json
+{
+    "Version":"2012-10-17",
+    "Statement":[
+     {
+       "Sid":"AddPerm",
+       "Effect":"Allow",
+       "Principal": "*",
+       "Action":["s3:GetObject"],
+       "Resource":["arn:aws:s3:::mybucket64475279230/*"]
+     }
+    ]
+}
+```
