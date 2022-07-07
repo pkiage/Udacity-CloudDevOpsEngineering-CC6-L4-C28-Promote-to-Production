@@ -21,3 +21,7 @@ From root folder
 ```shell
 aws cloudformation deploy --template-file cloudfront.yml --stack-name production-distro --parameter-overrides PipelineID="mybucketname"
 ```
+
+### Solution Reference
+
+[udacity/nd9991-c3-hello-world-exercise-solution](https://github.com/udacity/nd9991-c3-hello-world-exercise-solution)
